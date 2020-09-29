@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MacCatalystMenuBar
+//  Test
 //
-//  Created by Julian Beaulieu on 9/21/20.
+//  Created by Julian Beaulieu on 9/28/20.
 //
 
 import UIKit

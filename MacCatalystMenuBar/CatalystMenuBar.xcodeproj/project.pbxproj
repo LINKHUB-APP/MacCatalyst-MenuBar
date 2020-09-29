@@ -14,7 +14,7 @@
 		B064C4CF2522E2980002A9E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B064C4CE2522E2980002A9E6 /* Preview Assets.xcassets */; };
 		B064C4D22522E2980002A9E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B064C4D02522E2980002A9E6 /* LaunchScreen.storyboard */; };
 		B064C4E32522E2D40002A9E6 /* AppKitIntegration.h in Headers */ = {isa = PBXBuildFile; fileRef = B064C4E12522E2D30002A9E6 /* AppKitIntegration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B064C4EA2522E2E50002A9E6 /* AppKitIntegration.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B064C4DF2522E2D30002A9E6 /* AppKitIntegration.framework */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B064C4EA2522E2E50002A9E6 /* AppKitIntegration.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B064C4DF2522E2D30002A9E6 /* AppKitIntegration.framework */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B064C4EE2522E3BF0002A9E6 /* AppKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064C4ED2522E3BF0002A9E6 /* AppKitController.swift */; };
 /* End PBXBuildFile section */
 

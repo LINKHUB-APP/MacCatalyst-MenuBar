@@ -6,9 +6,12 @@
 //
 
 import AppKit
+import SwiftUI
+
 
 @objc class AppKitController: NSObject {
-    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+    let statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+    var popover: NSPopover!
 
     override init() {
         super.init()
@@ -20,9 +23,45 @@ import AppKit
     
     func setupMenuItem() {
         
-        statusItem.image = NSImage(named: "MenuBar")
+        let menuBarView = MenuBarView()
+
+        // Create the popover
+        let popover = NSPopover()
+        popover.contentSize = NSSize(width: 400, height: 400)
+        popover.behavior = .transient
         
-        statusItem.menu = createMenu()
+        //########################################################################
+        //########################################################################
+        //########################################################################
+        
+        //Comment out this line to make MenuBar Item appear
+        popover.contentViewController = NSHostingController(rootView: menuBarView)
+        
+        //########################################################################
+        //########################################################################
+        //########################################################################
+        
+        self.popover = popover
+        
+        if let button = self.statusBarItem.button {
+            button.image = NSImage(named: "MenuBar")
+            button.action = #selector(togglePopover(_:))
+        }
+        
+        NSApp.activate(ignoringOtherApps: true)
+        
+        
+        //statusItem.menu = createMenu()
+    }
+    
+    @objc func togglePopover(_ sender: AnyObject?) {
+        if let button = self.statusBarItem.button {
+            if self.popover.isShown {
+                self.popover.performClose(sender)
+            } else {
+                self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+            }
+        }
     }
     
     func createMenu() -> NSMenu {
@@ -35,5 +74,13 @@ import AppKit
     
     @objc func doThing(_ sender:Any?) {
         NSLog("Did the thing")
+    }
+}
+
+struct MenuBarView: View {
+    var body: some View{
+        VStack{
+            Text("My Menu")
+        }
     }
 }

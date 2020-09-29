@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Test
+//  CatalystTest
 //
 //  Created by Julian Beaulieu on 9/28/20.
 //

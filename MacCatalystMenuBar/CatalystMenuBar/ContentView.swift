@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  CatalystTest
+//  CatalystMenuBar
 //
-//  Created by Julian Beaulieu on 9/28/20.
+//  Created by Steven Troughton-Smith on 29/09/2020.
 //
 
 import SwiftUI

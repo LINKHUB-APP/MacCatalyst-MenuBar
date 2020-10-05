@@ -1,3 +1,7 @@
+## This is a template repository on how to make a Menu Bar item in a macCatalyst app.
+
+
+##  This are some resources I used to understand this a bit more.
 [This is a open source menu bar app which we are trying to recreate](https://github.com/leits/MeetingBar) </br>
 [This is a project demonstrates how to integrate macOS apps into macCatalyst](https://github.com/noahsark769/CatalystPlayground)
 [This blog post shows you that making a menubar is possible, however, it does not give any solutions as to how](https://www.highcaffeinecontent.com/blog/20190607-Beyond-the-Checkbox-with-Catalyst-and-AppKit)
